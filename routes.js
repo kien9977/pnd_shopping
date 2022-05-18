@@ -1,6 +1,6 @@
 'use strict';
 module.exports = function(app) {
-  let productsController = require('./products/productsController.js');
+  let productsController = require('./products/productsController');
 
   // todoList Routes
   app.route('/products')
