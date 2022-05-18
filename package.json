@@ -1,0 +1,27 @@
+{
+  "name": "pnd_shopping",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kien9977/pnd_shopping.git"
+  },
+  "author": "kien9977, phanngocduc0512",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kien9977/pnd_shopping/issues"
+  },
+  "homepage": "https://github.com/kien9977/pnd_shopping#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mysql": "^2.18.1"
+  }
+}
