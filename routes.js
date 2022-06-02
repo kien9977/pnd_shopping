@@ -10,5 +10,5 @@ module.exports = function(app) {
 		.get(productsController.detail);
 
     app.route('/Login')
-    	.get(Login.login);
+    	.post(Login.login);
 };
