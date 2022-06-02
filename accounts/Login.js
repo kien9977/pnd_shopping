@@ -10,10 +10,10 @@ const db = require('./../db.js')
 
 module.exports = {
 	login: (req, res) => {
-		let resp = {"code": 0, "description": "", "data": {"user_id": 0, "display_name": "", "balance": 0, "token": ""}}
+		let resp = {"code": 0, "description": "", "data": {"user_id": 0, "name": "", "token": ""}}
 		if(typeof req.body.username !== 'undefined' && typeof req.body.password !== 'undefined') {
 			// start asking db for 
-			var sql = 'SELECT id, display_name, balance FROM users WHERE username = ? AND password = ?'
+			var sql = 'SELECT id, name FROM users WHERE username = ? AND password = ?'
 
 			db.query(sql, [req.body.username, password_encryption(req.body.password)], (err, response, fields) => {
 				
@@ -40,9 +40,8 @@ module.exports = {
 								resp.code = 200
 								resp.description = status_code_description(resp.code)
 								resp.data.user_id = result[0].id
-								resp.data.display_name = result[0].display_name
+								resp.data.name = result[0].name
 								resp.data.token = token
-								resp.data.balance = result[0].balance
 								res.json(resp)
 							}
 						})
